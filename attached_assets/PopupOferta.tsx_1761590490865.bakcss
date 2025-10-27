@@ -1,0 +1,108 @@
+﻿import { X, Gift, Check } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import { GOOGLE_FORM_URL } from '@/lib/constants';
+
+interface PopupOfertaProps {
+  onFechar: () => void;
+}
+
+export default function PopupOferta({ onFechar }: PopupOfertaProps) {
+
+  const abrirFormulario = () => {
+    window.open(GOOGLE_FORM_URL, '_blank');
+    onFechar();
+  };
+
+  return (
+    <div
+      classNome="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm animate-in fade-in duration-300"
+      onClick={onFechar}
+      data-testid="popup-oferta"
+    >
+      <Card
+        classNome="relative max-w-md w-full  shadow-2xl border-none animate-in zoom-in-95 duration-300"
+        onClick={(e) => e.stopPropagation()}
+      >
+        {/* BotÃ£o fechar */}
+        <button
+          onClick={onFechar}
+          classNome="absolute top-4 right-4 p-2 rounded-full hover: transition-colors"
+          aria-label="Fechar"
+          data-testid="button-fechar-popup"
+        >
+          <X classNome="w-5 h-5 text-gray-500" />
+        </button>
+
+        <CardContent classNome="p-8 space-y-6">
+          {/* Ãcone de presente */}
+          <div classNome="flex justify-center">
+            <div classNome="flex items-center justify-center w-16 h-16 rounded-full bg-saluviaGold/20">
+              <Gift classNome="w-8 h-8 text-saluviaGold" />
+            </div>
+          </div>
+
+          {/* TÃ­tulo */}
+          <div classNome="text-center space-y-2">
+            <h2 classNome="text-2xl sm:text-3xl font-title font-bold text-gray-900" data-testid="text-popup-titulo">
+              BÃ”NUS EXCLUSIVO
+            </h2>
+            <p classNome="text-xl font-title font-semibold text-saluviaGold">
+              10% DE DESCONTO NA PRIMEIRA COMPRA
+            </p>
+          </div>
+
+          {/* BenefÃ­cios */}
+          <div classNome="space-y-3">
+            <p classNome="text-sm font-body text-gray-700 text-center">
+              Preencha o formulÃ¡rio e receba:
+            </p>
+            
+            <div classNome="space-y-2">
+              <div classNome="flex items-start gap-3">
+                <div classNome="mt-0.5">
+                  <Check classNome="w-5 h-5 text-saluviaGreen" />
+                </div>
+                <p classNome="text-sm font-body text-gray-700">
+                  CatÃ¡logo tÃ©cnico completo
+                </p>
+              </div>
+              <div classNome="flex items-start gap-3">
+                <div classNome="mt-0.5">
+                  <Check classNome="w-5 h-5 text-saluviaGreen" />
+                </div>
+                <p classNome="text-sm font-body text-gray-700">
+                  Atendimento personalizado
+                </p>
+              </div>
+              <div classNome="flex items-start gap-3">
+                <div classNome="mt-0.5">
+                  <Check classNome="w-5 h-5 text-saluviaGold" />
+                </div>
+                <p classNome="text-sm font-body text-saluviaGold font-medium">
+                  10% off na primeira compra
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA */}
+          <Button
+            size="lg"
+            onClick={abrirFormulario}
+            classNome="w-full bg-saluviaGold hover:bg-saluviaGold/90 text-gray-900 font-button font-semibold shadow-lg"
+            data-testid="button-cadastrar-bonus"
+          >
+            QUERO ME CADASTRAR E GARANTIR MEU BÃ”NUS
+          </Button>
+
+          {/* Texto legal */}
+          <p classNome="text-xs font-body text-gray-500 text-center">
+            Oferta vÃ¡lida para novos clientes. Seus dados estÃ£o protegidos conforme a LGPD.
+          </p>
+        </CardContent>
+      </Card>
+    </div>
+  );
+}
+

@@ -1,5 +1,5 @@
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 import {
   Shield,
   Scissors,
@@ -7,9 +7,9 @@ import {
   Syringe,
   Sparkles,
   HeartPulse,
-} from 'lucide-react';
-import { motion } from 'framer-motion';
-import { GOOGLE_FORM_URL } from '@/lib/constants';
+} from "lucide-react";
+import { motion } from "framer-motion";
+import { GOOGLE_FORM_URL } from "@/lib/constants";
 
 const categorias = [
   {
@@ -63,7 +63,6 @@ export default function Portfolio() {
       className="py-16 sm:py-20 bg-saluviaGreen text-saluviaGold"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
         {/* Cabeçalho */}
         <motion.div
           className="text-center max-w-3xl mx-auto mb-12"
@@ -97,25 +96,22 @@ export default function Portfolio() {
                            transition-all duration-300 rounded-lg overflow-hidden"
               >
                 <CardContent className="p-0 overflow-hidden">
-
-                  {/* Imagem no topo */}
-                  <div className="relative w-full h-48 overflow-hidden rounded-t-lg bg-saluviaGreen/50">
-                    {categoria.imagem ? (
+                  
+                  {/* Imagem com proporção fixa e ajuste */}
+                  <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] overflow-hidden rounded-t-lg bg-saluviaGreen/50">
+                    {categoria.imagem && (
                       <motion.img
                         src={categoria.imagem}
                         alt={categoria.titulo}
-                        className="w-full h-full object-cover opacity-95 hover:opacity-100 transition-opacity duration-300"
+                        className="w-full h-full object-cover object-center scale-105 hover:scale-110 transition-transform duration-500 ease-in-out"
                         loading="lazy"
                         initial={{ scale: 1.05, opacity: 0 }}
                         whileInView={{ scale: 1, opacity: 1 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
-                        onError={(e) => {
-                          // Se a imagem não carregar, oculta o elemento img
-                          e.currentTarget.style.display = 'none';
-                        }}
+                        onError={(e) => (e.currentTarget.style.display = "none")}
                       />
-                    ) : null}
+                    )}
                     <div className="absolute inset-0 bg-gradient-to-t from-saluviaGreen/70 via-transparent"></div>
                   </div>
 
@@ -154,7 +150,7 @@ export default function Portfolio() {
                       >
                         <Button
                           variant="link"
-                          className="text-saluviaGold hover:text-saluviaGold/80 p-0 h-auto font-body"
+                          className="text-saluviaGold hover:text-saluviaGold/80 font-body"
                         >
                           Solicitar amostra / preço
                         </Button>
@@ -193,3 +189,4 @@ export default function Portfolio() {
     </section>
   );
 }
+

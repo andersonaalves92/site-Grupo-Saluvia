@@ -4,7 +4,7 @@ const diferenciais = [
   {
     icone: MapPin,
     titulo: "Estoque em Brasília",
-    descricao: "Entregas em até 24h para todo o Distrito Federal e região",
+    descricao: "Entregas otimizadas para todo o Distrito Federal e região",
   },
   {
     icone: FileCheck,

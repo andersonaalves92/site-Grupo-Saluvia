@@ -10,7 +10,7 @@ const itens = [
   {
     icone: Truck,
     titulo: "Entrega Rápida",
-    descricao: "Estoque próprio em Brasília com SLA de 24 horas para itens de alto giro.",
+    descricao: "Estoque local em Brasília - entregas otimizadas.",
   },
   {
     icone: DollarSign,
@@ -31,7 +31,7 @@ export default function Credibilidade() {
         {/* Cabeçalho da seção */}
         <div className="text-center max-w-3xl mx-auto mb-12">
           <h2 className="text-3xl sm:text-4xl font-title font-bold text-saluviaGold mb-4" data-testid="text-credibilidade-titulo">
-            Experiência pública, excelência privada.
+            A solidez e confiança conquistada no setor público agora no privado
           </h2>
           <p className="text-lg font-body text-saluviaBeige leading-relaxed">
             Com contratos ativos e fornecimento recorrente para órgãos públicos, o Grupo Saluvia traz ao setor privado a credibilidade de quem já atende com rigor técnico, transparência e eficiência logística.
@@ -48,13 +48,13 @@ export default function Credibilidade() {
             >
               <CardContent className="p-6 space-y-4">
                 <div className="flex items-center justify-center w-14 h-14 rounded-lg bg-saluviaGreen/10">
-                  <item.icone className="w-7 h-7 text-saluviaGreen" />
+                  <item.icone className="w-7 h-7 text-saluviaGold" />
                 </div>
                 <div className="space-y-2">
-                  <h3 className="text-lg font-title font-semibold text-saluviaGreen">
+                  <h3 className="text-lg font-title font-semibold text-saluviaGold">
                     {item.titulo}
                   </h3>
-                  <p className="text-sm font-body text-gray-700 leading-relaxed">
+                  <p className="text-sm font-body text-gray-100 leading-relaxed">
                     {item.descricao}
                   </p>
                 </div>

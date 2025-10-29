@@ -18,7 +18,7 @@ const segmentos = [
   {
     icone: Stethoscope,
     titulo: "Clínicas Especializadas",
-    descricao: "Kits por especialidade (angiologia, ortopedia, oncologia) com uso recorrente e entrega ágil.",
+    descricao: "Kits por especialidade com uso recorrente e entrega ágil.",
   },
   {
     icone: FlaskConical,

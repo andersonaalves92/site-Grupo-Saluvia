@@ -20,7 +20,7 @@ export default function Hero() {
           {/* Coluna esquerda - Conteúdo textual */}
           <div className="space-y-8">
             <div className="space-y-4">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-title font-bold text-gray-900 leading-tight" data-testid="text-hero-titulo">
+              <h1 className="text-4xl sm:text-5xl lg:text-5xl font-title font-bold text-gray-900 leading-tight" data-testid="text-hero-titulo">
                 Excelência em Materiais Hospitalares agora também para o setor privado.
               </h1>
               <p className="text-lg sm:text-xl font-body text-gray-700 leading-relaxed max-w-2xl" data-testid="text-hero-subtitulo">
@@ -63,7 +63,7 @@ export default function Hero() {
                   <div className="flex items-center gap-2">
                     <Clock className="w-6 h-6 text-saluviaGold" />
                     <h3 className="text-2xl font-title font-bold text-saluviaGold" data-testid="text-card-titulo">
-                      Entrega em até 24h
+                      Entrega otimizadas
                     </h3>
                   </div>
                   <p className="text-base font-body text-saluviaBeige">

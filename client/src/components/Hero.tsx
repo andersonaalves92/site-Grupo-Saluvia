@@ -63,7 +63,7 @@ export default function Hero() {
                   <div className="flex items-center gap-2">
                     <Clock className="w-6 h-6 text-saluviaGold" />
                     <h3 className="text-2xl font-title font-bold text-saluviaGold" data-testid="text-card-titulo">
-                      Entrega otimizadas
+                      Entregas otimizadas
                     </h3>
                   </div>
                   <p className="text-base font-body text-saluviaBeige">
